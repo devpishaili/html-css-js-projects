@@ -9,6 +9,8 @@ app.use(
   express.static(path.resolve(__dirname, "frontend", "static"))
 );
 
+// app.use(express.static("static"));
+
 app.get("/*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
 });
