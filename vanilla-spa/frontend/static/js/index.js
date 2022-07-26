@@ -30,6 +30,8 @@ const router = async () => {
   console.log(match.route.view);
 };
 
+window.addEventListener("popstate", router);
+
 // run on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {
