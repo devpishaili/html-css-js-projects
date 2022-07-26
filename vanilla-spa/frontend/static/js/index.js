@@ -1,8 +1,13 @@
+const navigateTo = (url) => {
+  history.pushState(null, null, url);
+  router();
+};
+
 const router = async () => {
   const routes = [
-    { path: "/", view: () => console.log("Viewing Dashboard") },
-    { path: "/posts", view: () => console.log("Viewing Posts") },
-    { path: "/settings", view: () => console.log("Viewing Settings") },
+    { path: "/", view: "Viewing Dashboard" },
+    { path: "/posts", view: "Viewing Posts" },
+    { path: "/settings", view: "Viewing Settings" },
   ];
 
   //   Test each route for potential match
@@ -22,10 +27,17 @@ const router = async () => {
     };
   }
 
-  console.log(match);
+  console.log(match.route.view);
 };
 
 // run on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", (e) => {
+    if (e.target.matches("[data-link]")) {
+      e.preventDefault();
+      navigateTo(e.target.href);
+    }
+  });
+
   router();
 });
