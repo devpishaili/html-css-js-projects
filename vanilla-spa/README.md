@@ -9,4 +9,6 @@ It is called Vanilla SPA as this Single Page Application is built entirely with 
   - 📂 **static**: contains all static rendering to client
     - 📂 **JS**: contains all client js rendering files
       - 📂 **views**: containing all pages that are to be loaded and rendered on router link / user request change.
+
+- 📂 **node_modules**: contains all npm packages used in the project (if cloning this for the first time, this directory will be generated after running ```npm i``` on your terminal in this project's directory. )
   
