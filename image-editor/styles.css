@@ -37,6 +37,11 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.container.disable :where(.editor-panel, .reset-filter, .save-img) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .container h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -181,11 +186,25 @@ body {
 
   .wrapper .preview-img {
     width: 100%;
+    margin: 0 0 15px;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .controls {
+    flex-direction: column;
+  }
+
   .controls button {
     width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .controls .row {
+    width: 100%;
+  }
+
+  .controls .row .save-img {
+    margin-left: 0px;
   }
 }
