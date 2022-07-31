@@ -27,6 +27,11 @@ body {
   padding: 20px 5%;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+}
+
 .container {
   width: 100%;
   padding: 20px 5%;
@@ -127,6 +132,7 @@ body {
 
 .wrapper .preview-img {
   flex: 1;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   display: flex;
