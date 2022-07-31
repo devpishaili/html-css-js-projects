@@ -16,3 +16,7 @@
 - clone
 - open folder in vscode
 - run live server
+
+## Further references
+
+https://wa.me/2349012809289
