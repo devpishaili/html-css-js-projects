@@ -3,7 +3,7 @@ const fileInput = document.querySelector(".file-input"),
   filterName = document.querySelector(".filter-info .name"),
   filterValue = document.querySelector(".filter-info .value"),
   filterSlider = document.querySelector(".slider input"),
-  previeImg = document.querySelector(".preview-img img"),
+  previewImg = document.querySelector(".preview-img img"),
   chooseImgBtn = document.querySelector(".choose-img");
 
 let brightness = 100,
@@ -11,11 +11,15 @@ let brightness = 100,
   inversion = 0,
   grayscale = 0;
 
+const applyFilters = () => {
+  previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
+};
+
 const loadImage = () => {
   let file = fileInput.files[0]; // getting user selected file
   if (!file) return; // return if user hasn't selected file on file dialog open
-  previeImg.src = URL.createObjectURL(file);
-  previeImg.addEventListener("load", () => {
+  previewImg.src = URL.createObjectURL(file);
+  previewImg.addEventListener("load", () => {
     document.querySelector(".container").classList.remove("disable");
   });
 };
@@ -28,12 +32,12 @@ filterOptions.forEach((option) => {
 
     if (option.id === "brightness") {
       filterSlider.max = "200";
-      filterValue.innerText =`${brightness}%` ;
+      filterValue.innerText = `${brightness}%`;
       filterSlider.value = brightness;
     } else if (option.id === "saturation") {
       filterSlider.max = "200";
       filterValue.innerText = `${saturation}%`;
-      filterSlider.value =saturation ;
+      filterSlider.value = saturation;
     } else if (option.id === "inversion") {
       filterSlider.max = "100";
       filterValue.innerText = `${inversion}%`;
@@ -59,6 +63,8 @@ const updateFilter = () => {
   } else {
     grayscale = filterSlider.value;
   }
+
+  applyFilters();
 };
 
 fileInput.addEventListener("change", loadImage);
