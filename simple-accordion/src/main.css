@@ -30,6 +30,7 @@ body {
 
 .container h1 {
   color: #333;
+  margin-bottom: 2rem;
 }
 
 .accordions {
@@ -115,12 +116,13 @@ body {
   top: 0;
   left: 0;
   font-size: 8em;
-  color: rgba(0, 0, 0, 0.05);
+  color: rgba(255, 255, 255, 0.2);
+  justify-content: flex-end;
 }
 
 .accordions .accordion .content {
   max-height: 0;
-  transition: 1s;
+  transition: .5s ease-in-out;
   overflow: hidden;
 }
 
