@@ -7,12 +7,76 @@
     <title>Simple Accordion</title>
     <meta name="description" content="Simple Accordion" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- GOOGLE POPPINS FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MAIN STYLESHEET -->
     <link rel="stylesheet" href="./src/main.css" />
   </head>
   <body>
     <div class="container">
-      <h2>Simple Accordion Design</h2>
-      <div class="accordion"></div>
+      <h1>Simple Accordion Design</h1>
+      <div class="accordions">
+        <div class="accordion">
+          <input type="radio" name="acc" id="acc1" />
+          <label for="acc1">
+            <h2>01</h2>
+            <h3>How do I apply?</h3>
+          </label>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              iste facilis culpa dolores harum, ducimus quae, dolor porro amet
+              iusto delectus reiciendis libero dolorem consequatur voluptatum
+              modi! Reiciendis, sequi pariatur!
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="acc" id="acc2" />
+          <label for="acc2">
+            <h2>02</h2>
+            <h3>Where do I apply?</h3>
+          </label>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              iste facilis culpa dolores harum, ducimus quae, dolor porro amet
+              iusto delectus reiciendis libero dolorem consequatur voluptatum
+              modi!
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="acc" id="acc3" />
+          <label for="acc3">
+            <h2>03</h2>
+            <h3>Who do I apply for?</h3>
+          </label>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              iste facilis culpa dolores harum, ducimus quae, dolor porro amet
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="acc" id="acc4" />
+          <label for="acc4">
+            <h2>04</h2>
+            <h3>Get Started?</h3>
+          </label>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./src/script.js" async defer></script>

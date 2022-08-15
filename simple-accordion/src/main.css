@@ -5,3 +5,132 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.container h1 {
+  color: #333;
+}
+
+.accordions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordions .accordion:nth-child(1) label h2 {
+  background: linear-gradient(135deg, #70f540, #47c628);
+}
+.accordions .accordion:nth-child(2) label h2 {
+  background: linear-gradient(135deg, #3c8ce7, #00eaff);
+}
+.accordions .accordion:nth-child(3) label h2 {
+  background: linear-gradient(135deg, #ff96f9, #c32bac);
+}
+.accordions .accordion:nth-child(4) label h2 {
+  background: linear-gradient(115deg, #fd6e6a, #ffc600);
+}
+
+.accordions .accordion {
+  position: relative;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordions .accordion input {
+  appearance: none;
+}
+
+.accordions .accordion label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordions .accordion label::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+}
+
+.accordions .accordion:hover label::after {
+  color: #333;
+}
+
+.accordions .accordion label h2 {
+  display: grid;
+  height: 40px;
+  width: 40px;
+  font-size: 1.25em;
+  place-items: center;
+  background-color: #333;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.accordions .accordion label h3 {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+
+.accordions .accordion input:checked ~ label::after {
+  transform: rotate(-45deg);
+  color: #333;
+}
+
+.accordions .accordion input:checked ~ label h2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.accordions .accordion .content {
+  max-height: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.accordions .accordion input:checked ~ .content {
+  max-height: 100vh;
+}
+
+.accordions .accordion .content p {
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  z-index: 10;
+}
