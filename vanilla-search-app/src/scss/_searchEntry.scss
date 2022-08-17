@@ -22,6 +22,11 @@
     border-radius: 580px;
     padding: 0.15rem 0.25rem 0.15rem 0.75rem;
 
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 2px 5px $searh-bar-border;
+    }
+
     @include mq(768px) {
       width: 80vw;
       padding: 1.25rem 1.5rem;
@@ -45,10 +50,60 @@
       }
     }
 
-    button {
+    .button {
       cursor: pointer;
       bottom: 0;
       background-color: transparent;
+      min-height: 40px;
+      outline: none;
+      border: none;
+
+      i {
+        font-family: "Font Awesome 5 Free";
+        font-size: 1rem;
+
+        @include mq(768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        i {
+          padding-bottom: 0.5rem;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+        }
+      }
+    }
+
+    .clear {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $stats-color;
+      border-right: thin solid $clear-button-color;
+
+      @include mq(768px) {
+        padding: 0 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        i {
+          color: $logo-red;
+        }
+      }
+    }
+
+    .searchButton {
+      &:hover,
+      &:focus {
+        color: $logo-green;
+      }
+      @include mq(768px) {
+        padding-left: 1rem;
+      }
     }
   }
 }

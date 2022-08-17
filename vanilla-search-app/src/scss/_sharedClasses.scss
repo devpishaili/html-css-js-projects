@@ -17,10 +17,10 @@
 .exclaim {
   display: inline-block;
   font-size: 2.5rem;
-  transform: rotate(120deg);
+  transform: rotate(12deg);
 
   @include mq(760px) {
-    font-size: 0.5rem;
+    font-size: 5rem;
   }
 }
 
@@ -30,7 +30,7 @@
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .flex {
