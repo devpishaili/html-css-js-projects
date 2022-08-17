@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Vanilla Search App</title>
+    <meta
+      name="description"
+      content="A Vanilla Search App - Proudly Inspired by DaveGray and Traversy Media"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/src/css/main.min.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="offscreen">Search me | A Wikipedia Powered Search Engine</h1>
+
+      <section class="searchEntry">
+        <h2 class="offscreen">Search Term Entry</h2>
+        <div class="logo" aria-hidden="true">SearchMe</div>
+
+        <form action="" id="searchBar" class="searchBar">
+          <label for="search" class="offscreen"
+            >Enter a search term or phrase</label
+          >
+          <input type="text" id="search" autocomplete="off" />
+          <div
+            class="none button clear"
+            id="clear"
+            role="button"
+            tabindex="0"
+            aria-label="Clear seearch terms"
+          >
+            <i class="fas fa-times"></i>
+          </div>
+          <button
+            id="searchButton"
+            class="button searchButton"
+            type="submit"
+            aria-label="Submit button"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </section>
+
+      <section class="results">
+        <h2 class="offscreen">SearchResults</h2>
+        <div class="statusBar">
+          <div class="stats" id="stats" aria-live="assertive"></div>
+        </div>
+        <div id="searchResults" class="searchResults">
+          <div class="result__item">
+            <div class="result__item--title">
+              <a href="">Dochsund</a>
+            </div>
+            <div class="result__item--contents">
+              <div class="result__item--image">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png"
+                  alt="Dochsund"
+                  class=""
+                />
+              </div>
+              <div class="result__item--text">
+                <p class="result__item--description">
+                  The dachshund (UK: DANKS-and, DASH-, -huund, -huunt or US:
+                  DAHKS...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <span
+          >&lt;&lt; Powered by
+          <a href="https://www.wikipedia.org" target="_blank"
+            >Wikipedia</a
+          ></span
+        >
+        <span>&gt;&gt;</span>
+      </p>
+    </footer>
+
+    <script src="" async defer></script>
+  </body>
+</html>
