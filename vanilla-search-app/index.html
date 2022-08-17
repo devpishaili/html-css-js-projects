@@ -49,11 +49,11 @@
           <div class="red exclaim">!</div>
         </div>
 
-        <form action="" id="searchBar" class="searchBar">
+        <form action="" id="searchBar" class="searchBar" role="search">
           <label for="search" class="offscreen"
             >Enter a search term or phrase</label
           >
-          <input type="text" id="search" autocomplete="off" />
+          <input type="text" id="search" autocomplete="off" role="searchbox" />
           <div
             class="none button clear"
             id="clear"
@@ -79,28 +79,7 @@
         <div class="statusBar">
           <div class="stats" id="stats" aria-live="assertive"></div>
         </div>
-        <div id="searchResults" class="searchResults">
-          <div class="result__item">
-            <div class="result__item--title">
-              <a href="">Dochsund</a>
-            </div>
-            <div class="result__item--contents">
-              <div class="result__item--image">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png"
-                  alt="Dochsund"
-                  class=""
-                />
-              </div>
-              <div class="result__item--text">
-                <p class="result__item--description">
-                  The dachshund (UK: DANKS-and, DASH-, -huund, -huunt or US:
-                  DAHKS...
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="searchResults" class="searchResults"></div>
       </section>
     </main>
 
@@ -116,6 +95,6 @@
       </p>
     </footer>
 
-    <script src="./src/js/script.js" async defer></script>
+    <script src="./src/js/script.js" async defer type="module"></script>
   </body>
 </html>

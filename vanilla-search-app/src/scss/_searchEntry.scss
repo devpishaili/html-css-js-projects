@@ -83,6 +83,7 @@
       align-items: center;
       color: $stats-color;
       border-right: thin solid $clear-button-color;
+      padding: 0 0.5rem;
 
       @include mq(768px) {
         padding: 0 1rem;
@@ -101,6 +102,9 @@
       &:focus {
         color: $logo-green;
       }
+
+      padding-left: 0.5rem;
+
       @include mq(768px) {
         padding-left: 1rem;
       }
