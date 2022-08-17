@@ -1,0 +1,7 @@
+* {
+  user-select: none;
+}
+
+#spinner {
+  display: none;
+}
