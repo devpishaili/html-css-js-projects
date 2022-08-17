@@ -6,8 +6,8 @@ QR Codes allow smartphone users to access your website and links simply and quic
 
 - [x] Scrolls to Download Button on QR Image Generated
 - [x] Set specific domain to be working with
-- [] Set preferable Theme, Typography and Brand
+- [ ] Set preferable Theme, Typography and Brand
 
 ## Illustration
 
-![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/image-editor/images/illustration-1.gif)
+![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/qr-code-generator/assets/images/illustration-1.gif)
