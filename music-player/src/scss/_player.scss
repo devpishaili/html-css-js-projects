@@ -1,0 +1,189 @@
+.player {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 6px 5px #ccc;
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .now-playing {
+    font-size: 1rem;
+  }
+
+  .track-name {
+    font-size: 2.5rem;
+  }
+  .track-artist {
+    margin-top: 5px;
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  .active {
+    color: black;
+  }
+
+  .repeat-track,
+  .random-track,
+  .playpause-track,
+  .prev-track,
+  .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .seek_slider,
+  .volume_slider {
+    appearance: none;
+    height: 5px;
+    background-color: #83a9ff;
+    opacity: 0.8;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border: 3px solid #3774ff;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .seek_slider {
+    width: 60%;
+  }
+  .volume_slider {
+    width: 30%;
+  }
+
+  .current-time,
+  .total-duration {
+    padding: 10px;
+  }
+
+  i {
+    &.fa {
+      &-volume {
+        &-up,
+        &-down {
+          padding: 10px;
+        }
+      }
+
+      &-play-circle,
+      &-pause-circle,
+      &-step-forward,
+      &-step-backward {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .randomActive {
+    color: black;
+  }
+
+  .rotate {
+    animation: rotation 8s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  .loader {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .loader .stroke {
+    background-color: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    animation: animate 1.4s linear infinite;
+  }
+
+  @keyframes animate {
+    50% {
+      height: 20%;
+      background-color: #4286f4;
+    }
+
+    100% {
+      height: 100%;
+    }
+  }
+
+  .stroke {
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0s;
+    }
+  }
+}
