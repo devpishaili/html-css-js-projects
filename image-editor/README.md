@@ -1,15 +1,8 @@
-# Image Editor
+# MUSIC PLAYER
 
 ## Illustration
-![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/image-editor/images/illustration-1.png)
 
-
-## Functionalities - CSS
-![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/image-editor/images/illustration-2.gif)
-
-## Functionalities - JS 1
-![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/image-editor/images/illustration-3.gif)
-
+![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/music-player/assets/images/illustration-1.gif)
 
 ## Set up Locally
 
