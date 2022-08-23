@@ -1,0 +1,10 @@
+.error {
+  &::before {
+    @extend %status;
+    content: "File Error";
+  }
+
+  &::-webkit-progress-value {
+    background-color: rgb(243, 93, 55);
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "image-compressor",
+  "version": "1.0.0",
+  "description": "TinyPNG Image Compressor clone",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "image",
+    "compressor",
+    "tinypng"
+  ],
+  "author": "Dev P Ishaili",
+  "license": "MIT",
+  "dependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "netlify-cli": "^11.5.0"
+  }
+}

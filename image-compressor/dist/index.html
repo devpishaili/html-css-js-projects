@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- WEBSITE TITLE -->
+    <title>Image Compressor - TinyPNG Clone</title>
+
+    <!-- SEO META DATA -->
+    <meta name="description" content="TinyPNG Image Compressor Clone" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <!-- SCRIPT -->
+    <script src="js/main.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <!-- Image upload area -->
+      <section class="droparea">
+        <i class="far fa-images"></i>
+        <p>Drop your .png or .jpg files here!</p>
+        <p><small>Up to 20 images, max 4 MB each</small></p>
+      </section>
+
+      <!-- Compression results area -->
+      <section class="results none">
+        <ul class="results__list" id="results__list"></ul>
+      </section>
+    </main>
+  </body>
+</html>

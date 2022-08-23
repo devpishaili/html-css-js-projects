@@ -1,0 +1,79 @@
+.wrapper {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 265px);
+  gap: 15px;
+
+  &-item {
+    min-height: 250px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+  }
+
+  .add-box {
+    @include flexColumn();
+    @include flexCenter();
+    text-align: center;
+
+    .icon {
+      height: 78px;
+      width: 78px;
+      border: 2px dashed $base-color;
+      border-radius: 50%;
+      font-size: 48px;
+      color: $base-color;
+    }
+
+    p {
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+
+  .note {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    p {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+      color: $accent-color;
+      font-size: 16px;
+    }
+
+    .bottom-content {
+      @include flexCenter;
+      justify-content: space-between;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+
+      span {
+        color: #6d6d6d;
+        font-size: 14px;
+      }
+
+      .settings {
+        position: relative;
+
+        .menu {
+          position: absolute;
+          bottom: 0;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+        }
+
+        i {
+          color: #6d6d6d;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.finished {
+  &::before {
+    @extend %status;
+    content: "Finished";
+  }
+}

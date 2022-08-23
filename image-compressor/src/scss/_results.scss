@@ -1,0 +1,106 @@
+.results {
+  display: flex;
+  background-color: #fff;
+  margin: 16px auto;
+  padding: 0.7rem;
+  border: 1p solid rgb(187, 203, 208);
+  width: 100%;
+  max-width: 960px;
+
+  &__title,
+  &__download,
+  &__saved {
+    font-weight: bolder;
+  }
+
+  &__list {
+    width: 100%;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin: 4px;
+      padding: 0 0.3rem;
+      border: 1px solid rgb(207, 219, 222);
+      background-color: rgb(240, 250, 240);
+    }
+
+    div {
+      width: 33%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .divDL {
+      width: 100%;
+    }
+
+    p {
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 0.3rem;
+  }
+
+  &__bar {
+    -webkit-appearance: none;
+    width: 33%;
+    max-width: 292px;
+    height: 30px;
+    position: relative;
+  }
+
+  &__size {
+    display: none;
+    color: rgb(126, 182, 49);
+    font-size: 0.7rem;
+    font-weight: lighter;
+    min-width: 52px;
+  }
+
+  &__download {
+    width: 100%;
+    text-align: right;
+
+    a {
+      cursor: pointer;
+      padding-left: 0.3rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $text-color;
+      }
+    }
+  }
+
+  &__saved {
+    display: none;
+  }
+
+  @include mq(480px) {
+    &__download {
+      text-align: center;
+    }
+    &__saved {
+      display: block;
+    }
+  }
+
+  @include mq(640px) {
+    &__size {
+      display: block;
+    }
+  }
+}

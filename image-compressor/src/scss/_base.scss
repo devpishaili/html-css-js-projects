@@ -1,0 +1,117 @@
+$base-color: skyblue;
+$accent-color: #575757;
+$bg-color: $base-color;
+$text-color: #333;
+$font-stack: Arial, Helvetica, sans-serif;
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+%status {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  margin-left: -25px;
+  color: rgb(54, 58, 67);
+  font-size: 0.7rem;
+}
+
+@mixin flexColumn {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  justify-content: center;
+}
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+::-moz-progress-bar {
+  background-color: rgb(146, 237, 20);
+}
+
+::-webkit-progress-inner-element {
+  background-color: #fff;
+  border: 1px solid rgb(207, 219, 222);
+  padding: 13px;
+  border-radius: 15px;
+}
+
+::-webkit-progres-bar {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 22px;
+}
+
+::-webkit-progress-value {
+  background: rgb(146, 237, 20);
+  border-radius: 15px;
+}
+
+.green-border {
+  border-color: green;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}
+
+html {
+  font-size: 18px;
+  color: $text-color;
+  line-height: 1.5rem;
+  font-family: $font-stack;
+}
+
+body {
+  background-color: $bg-color;
+  background-image: url("../../assets/images/cloud-image.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.75em 1em;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  @include flexColumn;
+  position: relative;
+  width: 100%;
+}
+
+header {
+  margin-top: 1rem;
+}
