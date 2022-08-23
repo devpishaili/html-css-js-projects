@@ -5,7 +5,7 @@ export const //   ININTIALIZE APP
   initApp = () => {
     setDropArea();
 
-    droparea.addEventListener("drop", handleDrop);
+    document.querySelector(".droparea").addEventListener("drop", handleDrop);
   };
 
 document.addEventListener("DOMContentLoaded", initApp);
