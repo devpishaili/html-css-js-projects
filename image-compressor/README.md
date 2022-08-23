@@ -1,4 +1,4 @@
-# Image Compressor liik TinyPPNG
+# Image Compressor, CloiningTinyPNG
 
 ### Technologies
 
@@ -8,9 +8,13 @@
 - [x] FontAwesome
 - [x] Netlify Functions
 
-### Illustration
+### Programming Methodology
 
-![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/music-player/assets/images/illustration-1.gif)
+Procedural and Functioinal
+
+### Illustration 1
+
+![Illustration 1](https://github.com/devpishaili/html-css-js-projects/blob/main/image-compressor/dist/assets/images/illustration-1.png)
 
 ### Set up Locally
 
@@ -21,7 +25,7 @@
 
 ### Live Demo
 
-Readily not available. [./README#set-up-locally](Setup locally)
+Readily not available. [Setup locally](./README#set-up-locally)
 
 ## Further references
 
