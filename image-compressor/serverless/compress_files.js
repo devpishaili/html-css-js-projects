@@ -21,8 +21,8 @@ exports.handler = async (event, context) => {
             quality: [0.2, 0.6],
           }),
         ],
-      });
-    const fileSize = newImgBuffer.length,
+      }),
+      fileSize = newImgBuffer.length, // Set file size
       base64CompString = newImgBuffer.toString("base64"),
       imageDataObj = { base64CompString, filename, fileSize };
 
