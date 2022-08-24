@@ -1,0 +1,57 @@
+$white: #fff;
+$black: #000;
+$bgColor: #fc8989;
+$textColor: #333;
+$font-stack: "Poppins", sans-serif;
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  justify-content: center;
+}
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: $white;
+  font-family: $font-stack;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  @include flexCenter();
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

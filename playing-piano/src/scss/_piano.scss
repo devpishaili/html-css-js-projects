@@ -1,0 +1,35 @@
+#piano {
+  padding: 4rem 2.5rem 0;
+  background-color: $bgColor;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+
+  .key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+    border-bottom-right-radius: 0.35rem;
+    border-bottom-left-radius: 0.35rem;
+  }
+
+  .white {
+    --width: 100px;
+    background-color: $white;
+    border: 1px solid $black;
+
+    &:first-of-type {
+      border-top-left-radius: 0.35rem;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 0.35rem;
+    }
+  }
+
+  .black {
+    --width: 60px;
+    background-color: $black;
+    margin: 0 calc((var((--width)) / -2));
+    z-index: 2;
+  }
+}
