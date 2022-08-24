@@ -19,10 +19,18 @@
 
     &:first-of-type {
       border-top-left-radius: 0.35rem;
+      border: 0.5px solid $black;
+      border-right: 1px solid $black;
     }
 
     &:last-of-type {
       border-top-right-radius: 0.35rem;
+      border: 0.5px solid $black;
+      border-left: 1px solid $black;
+    }
+
+    &.active {
+      background-color: #ccc;
     }
   }
 
@@ -31,5 +39,9 @@
     background-color: $black;
     margin: 0 calc((var((--width)) / -2));
     z-index: 2;
+
+    &.active {
+      background-color: #333;
+    }
   }
 }
