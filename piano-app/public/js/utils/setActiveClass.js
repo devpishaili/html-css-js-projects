@@ -1,6 +1,6 @@
-export const setActiveClass = (element, status) => {
-  if (status === false) element.classList.remove("active");
+export const setActiveClass = (element, status, className) => {
+  if (status === false) element.classList.remove(className || "active");
   else if (status === "toggle") {
-    element.classList.toggle("active");
-  } else element.classList.add("active");
+    element.classList.toggle(className || "active");
+  } else element.classList.add(className || "active");
 };

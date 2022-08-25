@@ -4,18 +4,28 @@ import { pianoKeyNoteSrc, pianoKeys } from "../data/pianoKeys.js";
 import { setActiveClass } from "../utils/setActiveClass.js";
 
 let recordingStartTime = Date.now();
-let songNotes;
+let songNotes = currentSong && currentSong.notes;
+
+console.log(currentSong);
 
 const PianoHTML = document.querySelector(".keyboard"),
   PianoAudioHTML = document.querySelector(".audio-tags"),
   recordButton = document.querySelector(".record-button"),
-  playButton = document.querySelector(".play-button");
+  playButton = document.querySelector(".play-button"),
+  saveButton = document.querySelector(".save-button"),
+  songLinkButton = document.querySelector(".song-link");
 
 export const createHTMLElements = () => {
   PianoHTML.innerHTML = PianoKeyboard(pianoKeys);
   PianoAudioHTML.innerHTML = AudioTags(pianoKeys, pianoKeyNoteSrc);
-  recordButton.addEventListener("click", () => toggleRecording());
+  if (recordButton) {
+    recordButton.addEventListener("click", () => toggleRecording());
+  }
+  if (saveButton) {
+    saveButton.addEventListener("click", () => saveSong());
+  }
   playButton.addEventListener("click", () => playSong());
+  songLinkButton.addEventListener("click", () => songLinkSong());
 
   const keys = document.querySelectorAll(".key");
 
@@ -95,10 +105,15 @@ export const createHTMLElements = () => {
     recordingStartTime = Date.now();
     console.log(recordingStartTime);
     songNotes = [];
+    setActiveClass(playButton, false, "show");
+    setActiveClass(saveButton, false, "show");
+    setActiveClass(songLinkButton, false, "show");
   }
 
   function stopRecording() {
     playSong();
+    setActiveClass(playButton, true, "show");
+    setActiveClass(saveButton, true, "show");
   }
 
   function recordNote(note) {
@@ -119,4 +134,15 @@ export const createHTMLElements = () => {
   }
 
   /* - - - - End of Recorder Functions - - - - - */
+
+  /* - - - - Save Song Function - - - - - */
+
+  function saveSong() {
+    axios.post("/songs", { songNotes: songNotes }).then((res) => {
+      setActiveClass(songLinkButton, true, "show");
+      songLinkButton.href = `/songs/${res.data._id}`;
+    });
+  }
+
+  /* - - - - End of Save Song Function - - - - - */
 };

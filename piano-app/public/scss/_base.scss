@@ -27,6 +27,8 @@ $font-stack: "Poppins", sans-serif;
 }
 
 * {
+  font-family: inherit;
+
   &,
   &::before,
   &::after {
@@ -56,6 +58,12 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
   @media screen and (max-width: 620px) {
     transform: rotate(90deg);
   }

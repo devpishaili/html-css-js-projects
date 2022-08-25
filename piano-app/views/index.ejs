@@ -5,17 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GLOBAL CSS -->
-    <link rel="stylesheet" href="css/main.min.css" />
+    <!-- Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>JS Piano</title>
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="/css/main.min.css" />
+
+    <!-- Axios Script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Simple Piano App 🎉 With Functionalities</title>
   </head>
   <body>
     <main>
       <div class="buttons">
-        <button class="btn record-button">Record</button>
-        <button class="btn play-button">Play</button>
+        <% if (locals.song == null) { %>
+        <!-- Record Button -->
+        <button class="btn record-button">
+          <i class="fa fa-microphone"></i> Record
+        </button>
+        <!-- Save Button -->
+        <button class="btn save-button">
+          <i class="fa-solid fa-download"></i> Save
+        </button>
+        <% } else { %>
+
+        <!-- New Record Button -->
+        <a href="/" class="btn">
+          <i class="fa fa-microphone"></i>
+          Record New Song
+        </a>
+        <% } %>
+
+        <!-- Play Button -->
+        <button class="btn play-button <%= locals.song != null ?'show' : '' %>">
+          <i class="fa fa-play"></i> Play
+        </button>
       </div>
+
+      <!-- View Songs Button -->
+      <a href="#" class="btn song-link">
+        <i class="fa-solid fa-eye"></i>
+        View Song
+      </a>
+
       <!-- HTML TAG FOR PIANO ELEMENTS -->
       <div class="piano" id="piano">
         <div class="keyboard"></div>
@@ -26,6 +79,12 @@
     </main>
 
     <!-- SCRIPT -->
-    <script src="js/app.js" type="module"></script>
+
+    <!-- script to set current song -->
+    <script>
+      const currentSong = <%- JSON.stringify(locals.song) || 'undefined' %> ;
+    </script>
+
+    <script src="/js/app.js" type="module"></script>
   </body>
 </html>
