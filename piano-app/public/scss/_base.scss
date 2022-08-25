@@ -55,6 +55,12 @@ body {
   @include flexCenter();
 }
 
+main {
+  @media screen and (max-width: 620px) {
+    transform: rotate(90deg);
+  }
+}
+
 img {
   display: block;
   height: 100%;

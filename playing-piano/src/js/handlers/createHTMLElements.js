@@ -4,7 +4,7 @@ import { pianoKeyNoteSrc, pianoKeys } from "../data/pianoKeys.js";
 import { assignNotes } from "./assignNote.js";
 
 export const createHTMLElements = () => {
-  const PianoHTML = document.querySelector(".piano"),
+  const PianoHTML = document.querySelector(".keyboard"),
     PianoAudioHTML = document.querySelector(".audio-tags");
 
   PianoHTML.innerHTML = PianoKeyboard(pianoKeys);
